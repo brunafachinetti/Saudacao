@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet">
+    <style type="text/css">
+    
+    body {
+        background-color: rgb(81, 81, 245);
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #conteudo {
+        background-color: floralwhite;
+        border-radius: 20px;
+        width: 600px;
+        height: 350px;
+        margin: 0 auto;
+        box-shadow: 2px 1px 10px rgb(5, 5, 5);
+        padding: 30px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    img {
+        width: 250px;
+        height: 250px;
+        padding: 30px;
+        border-radius: 50%;
+    }
+    
+    </style>
+</head>
+<body onload="carregar()">
+
+    <h1>Seja Bem Vindo!</h1>
+
+    <div id="conteudo">
+        <div id="msg">
+            Aqui vai aparecer a msg
+        </div>
+        <div>
+            <img id="foto" src="manha.jpg" alt="">
+        </div>
+    </div>
+
+    <footer>
+        &copy; Exercicio do Curso em Video
+    </footer>
+
+    <script>
+        function carregar(){
+            var msg = window.document.getElementById('msg')
+            var img = window.document.getElementById('foto')
+            var data = new Date()
+            var hora = data.getHours()
+            msg.innerHTML = `Agora sao ${hora} horas.`
+
+            if (hora <= 11 ) {
+                msg.innerHTML = `Bom dia!<br>Agora sao ${hora} horas.`
+                img.src = 'manha.jpg'
+                document.body.style.background = '#E2CD9F'
+            } else if (hora <= 17 ) {
+                msg.innerHTML = `Bom tarde!<br>Agora sao ${hora} horas.`
+                img.src = 'tarde.jpg'
+                document.body.style.background = '#B9846F'
+            } else {
+                msg.innerHTML = `Boa noite!<br>Agora sao ${hora} horas.`
+                img.src = 'noite.jpg'
+                document.body.style.background = '#515154'
+            }
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
