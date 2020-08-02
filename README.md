@@ -1,2 +1,2 @@
 # Saudacao
-Uma pagina que muda de cor e de saudacao de acordo com o horario do sistema.
+A page that changes it's background color and greeting according to the computer's time.
